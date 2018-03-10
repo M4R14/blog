@@ -1,5 +1,5 @@
 #header {
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 
 .page-brand {
@@ -20,7 +20,17 @@
 }
 
 #content {
-  margin-bottom: 2em;
+  margin-bottom: 5em;
+}
+
+#content pre {
+  overflow: auto;
+  border: 1px solid #e4e4e4;
+  background-color: #e9ecef;
+  padding: 5px 15px;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 #content .list li{
@@ -33,6 +43,16 @@
   background-color: #dee2e6;
 }
 
-#side-nav {
-  border-left: 1px solid #e9ecef;
+.side-nav {
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.side-nav .tags {
+  display: none;
+}
+
+.side-nav .tags.show{
+  display: block;
 }

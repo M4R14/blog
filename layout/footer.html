@@ -1,7 +1,27 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-        <div id="comment" ></div>
+      <div class="form-group">
+          <label for="mail-boby">Send Mail</label>
+          <textarea
+            class="form-control"
+            id="mail-boby"
+            onchange="handleMailBody(this)"
+            placeholder="ทักท้ายกันหน่อย"
+            rows="3"></textarea>
+        </div>
+        <button
+          id='btn-mail-contact'
+          class="btn btn-primary mb-2"
+          data-mail-to="vachirawit.mark@gmail.com"
+          data-subject="blog - home"
+          data-body="1234"
+          onclick="handleClickContact(this)"
+        > contact
+        </button>
+    </div>
+    <div class="col-md-4">
+        
     </div>
   </div>
 </div>

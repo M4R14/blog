@@ -2,10 +2,11 @@
   <div class="row">
     <h2 class="content-title">วิธีแบ่งปั่น Dockerfile ให้ชาวบ้านใช้ กันบ้าง</h2>
   </div>
+  <br>
   <div class="row">
       วิธีแบ่งปั่น Dockerfile ให้ชาวบ้าน ก็คือการที่เราเขียน Dockerfile
       จะส่งให้คนอื่นใช่โดนที่ให้เพื่อนDav ของคุณเอาไปใช้เพียงแค่ <br>
-      <code> $ docker pull your_name/your_dockerfile</code>
+      <pre> $ docker pull your_name/your_dockerfile</pre>
   </div>
   <br>
   <div class="row">
@@ -15,18 +16,18 @@
           Log in Docker Cloud ด้วยคำสั่ง “docker login” ถ้าใครยังไม่มี Account 
           ก็ไปสมัครส่ะ Link อยู่นี่ล่ะ <a href="https://hub.docker.com/">https://hub.docker.com/</a>
           <br>
-          <code> $ docker login </code>
+          <pre> $ docker login </pre>
       </li>
       <li>
           Tag Docker image ที่สร้าง ด้วยคำสั่ง “docker tag” คือจะรันคำสั่งนี้ ก็ต้อง build Dockerfile
           ก่อนอ่ะ (my_image นี่เราตั้งขึ้นเอง อยากให้ชื่ออะไร ก็ตั้งไป)
           <br>
-          <code>$ docker tag my_image docker_id/my_image</code>
+          <pre>$ docker tag my_image docker_id/my_image</pre>
       </li>
       <li>
           ถึงตรงนี้คือส่ง Docker image ให้ชาวบ้านใช้ล่ะ คำสั่งคือ “docker push”
           <br>
-          <code>$ docker push docker_id/my_image</code>
+          <pre>$ docker push docker_id/my_image</pre>
       </li>
     </ol>
     เพียงเท่านี้ ชาวบ้าน ชาวช่อง ก็จะใช้ Docker image ที่เราทำไว้ได้ล่ะ <br>
