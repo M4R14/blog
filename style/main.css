@@ -1,0 +1,20 @@
+#header {
+  padding-top: 1em;
+  margin-bottom: 2em;
+}
+
+#content {
+  margin-bottom: 2em;
+}
+
+#content .list li{
+  margin-bottom: 1em;
+}
+
+#article {
+
+}
+
+#side-nav {
+  border-left: 1px solid #e9ecef;
+}
