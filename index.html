@@ -12,57 +12,31 @@
     <title>M4R14</title>
   </head>
   <body>
-    <div class="container">
-      <section id="header">
-          <h1>M4R14</h1>
-      </section>
-      <section id="content">
+    <section id="header"></section>
+    <section id="content">
+        <div class="container">
         <!-- Content here -->
         <div class="row">
-          <div id="article" class="col-md-9"></div>
+          <div class="col-md-9">
+            <div id="article" ></div>
+            <br>
+            <div id="article-tag"></div>
+          </div>
           <div id="side-nav" class="col-md-3"></div>
-        </div>
-      </section>
-      <section id="footer">
-          <p>
-            vachirawit.mark@gmail.com
-          </p>
-      </section>
-    </div>
+        </div>          
+      </div>
+    </section>
+    <section id="footer"></section>
         
-    
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-      fetch('layout/side-nav.html')
-        .then(response => response.text())
-        .then(text => {
-          const content = document.getElementById('side-nav');
-          content.innerHTML = text;
-        })
-      const getQuery = (variable) => {
-          var query = window.location.search.substring(1);
-          var vars = query.split('&');
-          for (var i = 0; i < vars.length; i++) {
-              var pair = vars[i].split('=');
-              if (decodeURIComponent(pair[0]) == variable) {
-                  return decodeURIComponent(pair[1]);
-              }
-          }
-      }
-      const content = getQuery('content');
-      fetch(`content/${content}.html`)
-        .then(response => response.text())
-        .then(text => {
-          const content = document.getElementById('article');
-          content.innerHTML = text;
-          const ct_title = content.querySelector('.content-title');
-          document.title = 'M4R14 | ' + ct_title.textContent;
-        })
-    </script> 
+    
+    <script src="js/contact.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/main.js"></script>
+    
   </body>
 </html>
